@@ -5,16 +5,16 @@ module.exports = function(grunt) {
       dist: {
         files: {
           'css/styles.css': 'scss/home.scss'
+        },
+        options: {
+          includePaths: ['bower_components/modularized-normalize-scss']
         }
       }
     },
     watch: {
-      source: {
+      sass: {
         files: ['scss/**/*.scss'],
-        tasks: ['sass'],
-        options: {
-          livereload: true,
-        }
+        tasks: ['sass']
       }
     }
   });
