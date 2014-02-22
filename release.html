@@ -1,0 +1,38 @@
+---
+layout: release
+title: PWEI Discography - {{ site.data.release.title }}
+---
+
+<div class="release">
+  <h1 class="release__title">{{ site.data.release.title }}</h1>
+  <div class="release__meta">
+    <dl>
+      <dt>Year:</dt>
+      <dd>{{ site.data.release.year }}</dd>
+      <dt>Label:</dt>
+      <dd>{{ site.data.release.label }}</dd>
+    </dl>
+  </div>
+  <div class="row">
+    <div class="release__images">
+    </div>
+    <div class="release__tracklist">
+      <ol class="tracklist">
+        {% for track in site.data.release.tracklist %}
+          <li class="tracklist__item">{{ track }}</li>
+        {% endfor %}
+      </ol>
+    </div>
+  </div>
+  {% if site.data.release.notes %}
+    <div class="row">
+      <h2 class="release__heading">Adam's Notes</h2>
+      <ul class="release__list">
+        {% for note in site.data.release.notes %}
+          <li class="release__list-item">{{ note }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+</div>
+
