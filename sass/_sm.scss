@@ -1,0 +1,32 @@
+body {
+  background: pink;
+}
+
+img {
+  display: inline;
+}
+
+.release:before {
+  display: none;
+}
+
+.releases {
+  display: table;
+}
+
+.release {
+  display: table-row;
+}
+
+.release__image,
+.release__title,
+.release__label,
+.release__year {
+  display: table-cell;
+}
+
+.release__label:before,
+.release__year:before {
+  display: none;
+}
+

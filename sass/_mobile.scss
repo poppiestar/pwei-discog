@@ -1,0 +1,30 @@
+body {
+  background: yellow;
+}
+
+.release:before {
+  display: block;
+  content: 'Release';
+  font-size: 16px;
+}
+
+.release {
+  margin-bottom: 10px;
+}
+
+.release__image { display: none; }
+
+.release__title,
+.release__label,
+.release__year {
+  display: block;
+}
+
+.release__label:before {
+  content: 'Label: ';
+}
+
+.release__year:before {
+  content: 'Year: ';
+}
+
