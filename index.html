@@ -3,23 +3,31 @@ layout: home
 title: PWEI Discography v.INCREDIBLE
 ---
 
+<div class="releases">
 {% for release in site.data.releases %}
-
   <div class="release">
-    <a class="release__image" href="release.html">
-      <img src="images/releases/{{ release.image }}.png" alt="{{ release.title }}" width="100" height="100">
-    </a>
-    <a class="release__title" href="release.html">
-      {{ release.title }}
-      <span class="release__versions">({{ release.versions }} versions)</span>
-    </a>
-    <a class="release__label" href="release.html">
-      {{ release.label }}
-    </a>
-    <a class="release__year" href="release.html">
-      {{ release.year }}
-    </a>
+    <span class="release__image">
+      <a href="release.html">
+        <img src="images/releases/{{ release.image }}.png" alt="{{ release.title }}" width="100" height="100">
+      </a>
+    </span>
+    <span class="release__title">
+      <a href="release.html">
+        {{ release.title }}
+        <span class="release__versions">({{ release.versions }} versions)</span>
+      </a>
+    </span>
+    <span class="release__label">
+      <a href="label.html">
+        {{ release.label }}
+      </a>
+    </span>
+    <span class="release__year">
+      <a href="year.html">
+        {{ release.year }}
+      </a>
+    </span>
   </div> <!-- /release -->
-
 {% endfor %}
+</div>
 
